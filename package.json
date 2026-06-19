@@ -2,9 +2,13 @@
   "name": "github-pages",
   "type": "module",
   "version": "0.0.1",
+  "config": {
+    "distDir": "really-hidden-folder"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:pages": "astro build && mkdir -p dist/$npm_package_config_distDir && mv dist/index.html dist/$npm_package_config_distDir/index.html",
     "preview": "astro preview",
     "astro": "astro"
   },
